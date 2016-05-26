@@ -16,9 +16,7 @@ namespace Container
 
         public TService Resolve<TService>()
         {
-            var factory = ((Func<Container, TService>)factories[typeof(TService)]);
-
-            return (TService)factory.Invoke(this);
+            return (TService)((Func<Container, TService>)factories[typeof(TService)]).Invoke(this);
         }
     }
 }

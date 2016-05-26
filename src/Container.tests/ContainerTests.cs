@@ -32,13 +32,14 @@ namespace UnitTestProject1
 
 
         }
-
-
     }
 
     public interface ICar { }
     public interface IEngine { }
-    public class Car : ICar { }
+    public class Car : ICar
+    {
+
+    }
     public class Engine : IEngine
     {
         public ICar car = null;
